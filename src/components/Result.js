@@ -18,8 +18,8 @@ export default function Result(props) {
 <TouchableOpacity style={styles.buttonB} onPress={limpiar}>
   <Text style={styles.text}>X</Text>
  </TouchableOpacity>
- <Text>-----------------------------------------------------------------------------------------------------------------</Text>
- <DataResult style={{textAlign:'center'}}
+ <Text style={styles.textDi}>-----------------------------------------------------------------------------------------------------------------</Text>
+ <DataResult style={{textAlign:'center', position:'relarive',top:-100}}
  title="Total a pagar: "
  value={`${total.totalPayable} $`}
  />
@@ -88,5 +88,9 @@ const styles = StyleSheet.create({
   fontSize: 18,
   color: '#fff',
   textAlign: 'center',
+ },
+ textDi:{
+   position:"relative",
+   top:-100
  }
 });
