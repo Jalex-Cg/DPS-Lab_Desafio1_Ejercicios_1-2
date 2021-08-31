@@ -8,11 +8,11 @@ export default function Footer(props) {
  return (
  <View style={styles.viewFooter}>
  <TouchableOpacity style={styles.button} onPress={calculate}>
- <Text style={styles.text}>Agregar</Text>
+ <Text style={styles.text}>Agregaaaaaar</Text>
  </TouchableOpacity>
 
  <TouchableOpacity style={styles.buttonB} onPress={limpiar}>
- <Text style={styles.text}>Borrar</Text>
+ <Text style={styles.text}>Borrasr</Text>
  </TouchableOpacity>
  </View>
  );

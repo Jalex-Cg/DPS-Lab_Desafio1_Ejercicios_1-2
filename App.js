@@ -125,12 +125,12 @@ export default function App() {
 }
 const styles = StyleSheet.create({
   safeArea: {
-    height: 290,
+    height: 200,
     alignItems: 'center',
   },
   background: {
     backgroundColor: colors.PRIMARY_COLOR,
-    height: 200,
+    height: 150,
     width: '100%',
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,

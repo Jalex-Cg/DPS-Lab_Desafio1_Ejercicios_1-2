@@ -13,7 +13,7 @@ export default function Form(props) {
         style={picketSelectStyles.pikerWeb}
         onValueChange={(value) => setMonths(value)}
         placeholder={{
-          label: 'Agregar Producto',
+          label: 'Agrgarsss Producto',
           value: null,
         }}
         items={[
@@ -45,7 +45,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   viewInputs: {
-    
+    position:'relative',
+    top:10,
+    left:10,
   },
   input: {
     height: 50,
@@ -68,6 +70,8 @@ const styles = StyleSheet.create({
 
 const picketSelectStyles = StyleSheet.create({
   pikerWeb:{
-
+    position:'relative',
+    top:10,
+    left:10,
   }
 });
