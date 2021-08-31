@@ -1,23 +1,26 @@
 import React from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 
 export default function Result(props) {
- const {capital, interest, months, monthsnom, total, errorMessage, setCapital} = props;
+ const {capital, interest, months, monthsnom, total, errorMessage, setCapital, limpiar} = props;
  
   return (
  <View style={styles.content}>
  {total && (<View style={styles.boxResult}>
  <Text style={styles.title}>Lista de Productos</Text>
- <DataResult title="Producto:" value={`${monthsnom} `} />
- <DataResult title="Precio del producto" value={`${months} $`} />
+ <DataResult title="Producto: " value={`${monthsnom} `} />
+ <DataResult title="Precio del producto " value={`${months} $`} />
  <TextInput style={styles.cantidad}
         placeholder="Cantidad"
         keyboardType="numeric"
         onChange={(e) => setCapital(e.nativeEvent.text)}
-      />
-
+  />
+<TouchableOpacity style={styles.buttonB} onPress={limpiar}>
+  <Text style={styles.text}>X</Text>
+ </TouchableOpacity>
+ <Text>-----------------------------------------------------------------------------------------------------------------</Text>
  <DataResult
- title="Total a pagar:"
+ title="Total a pagar: "
  value={`${total.totalPayable} $`}
  />
  </View>
@@ -30,7 +33,7 @@ export default function Result(props) {
 }
 
 function DataResult(props) {
- const {title, value} = props;
+ const {title, value,} = props;
  return (
  <View style={styles.value}>
  <Text>{title}</Text>
@@ -41,10 +44,10 @@ function DataResult(props) {
 
 const styles = StyleSheet.create({
  content: {
- marginHorizontal: 40,
+ marginHorizontal: 300,
  },
  boxResult: {
- padding: 30,
+ padding: 50,
  },
  title: {
  fontSize: 25,
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
  },
  value: {
  flexDirection: 'row',
- justifyContent: 'space-between',
+ 
  marginBottom: 20,
  },
  error: {
@@ -65,6 +68,25 @@ const styles = StyleSheet.create({
  },
  cantidad:{
    marginTop:20,
-   marginBottom:20,
+   width: '10%',
+   position:"relative",
+   left:500,
+   top:-70,
+ },
+ buttonB: {
+  backgroundColor: 'red',
+  padding: 6,
+  borderRadius: 20,
+  width: '5%', 
+  marginTop:25,
+  position:"relative",
+   left:600,
+   top:-125,
+ },
+ text: {
+  fontWeight: 'bold',
+  fontSize: 18,
+  color: '#fff',
+  textAlign: 'center',
  }
 });

@@ -4,15 +4,15 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import colors from '../utils/colors';
 
 export default function Footer(props) {
- const {calculate, limpiar, enviar} = props;
+ const {calculate, limpiar,} = props;
  return (
  <View style={styles.viewFooter}>
  <TouchableOpacity style={styles.button} onPress={calculate}>
- <Text style={styles.text}>Agregaaaaaar</Text>
+ <Text style={styles.text}>Agregar</Text>
  </TouchableOpacity>
 
  <TouchableOpacity style={styles.buttonB} onPress={limpiar}>
- <Text style={styles.text}>Borrasr</Text>
+ <Text style={styles.text}>Borrar Lista</Text>
  </TouchableOpacity>
  </View>
  );
@@ -24,18 +24,21 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     bottom: 30,
     width: '65%',
-    backgroundColor: colors.PRIMARY_COLOR,
     height: 50,
     borderRadius:10,
     alignItems: 'center',
     justifyContent: 'center',
  },
  button: {
- backgroundColor: colors.PRIMARY_COLOR_DARK,
+ backgroundColor: 'blue',
   padding: 6,
   borderRadius: 20,
-  width: '75%', 
-  marginTop:25
+  width: '25%', 
+  marginTop:25,
+  position:'relative',
+  top:-490,
+  
+
  },
  text: {
  fontWeight: 'bold',
@@ -44,9 +47,12 @@ const styles = StyleSheet.create({
  textAlign: 'center',
  },
  buttonB: {
- backgroundColor: colors.PRIMARY_COLOR_Borrar,
-  padding: 6,
-  borderRadius: 20,
-  width: '75%',
+   backgroundColor: 'red',
+   padding: 6,
+   borderRadius: 20,
+   width: '25%', 
+   marginTop:25,
+   
+   
  }
 });

@@ -35,26 +35,26 @@ export default function App() {
       const can = parseFloat(capital);
       const pro = parseFloat(months);
       const tot = pro;
-      if (pro == 1) {
-        setMonthsnom('Producto1');
-      } else if (pro == 2) {
-        setMonthsnom('Producto2');
-      } else if (pro == 3) {
-        setMonthsnom('Producto3');
-      } else if (pro == 4) {
-        setMonthsnom('Producto4');
-      } else if (pro == 5) {
-        setMonthsnom('Producto5');
-      } else if (pro == 6) {
-        setMonthsnom('Producto6');
-      } else if (pro == 7) {
-        setMonthsnom('Producto7');
-      } else if (pro == 8) {
-        setMonthsnom('Producto8');
-      } else if (pro == 9) {
-        setMonthsnom('Producto9');
-      } else if (pro == 10) {
-        setMonthsnom('Producto10');
+      if (pro == 0.25) {
+        setMonthsnom('Manzana');
+      } else if (pro == 0.20) {
+        setMonthsnom('Pera');
+      } else if (pro == 0.95) {
+        setMonthsnom('Mango');
+      } else if (pro == 1.50) {
+        setMonthsnom('Sandia');
+      } else if (pro == 1.00) {
+        setMonthsnom('Uvas');
+      } else if (pro == 1.15) {
+        setMonthsnom('Melon');
+      } else if (pro == 0.35) {
+        setMonthsnom('Banano');
+      } else if (pro == 0.55 ) {
+        setMonthsnom('Kiwi');
+      } else if (pro == 0.40) {
+        setMonthsnom('Naranja');
+      } else if (pro == 0.15) {
+        setMonthsnom('Mandarina');
       }
 
       setTotal({

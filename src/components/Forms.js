@@ -10,23 +10,23 @@ export default function Form(props) {
     <View style={styles.viewForm}>
       <View style={styles.viewInputs}></View>
       <RNPickerSelect
-        style={picketSelectStyles.pikerWeb}
+        style={picketSelectStyles.pikerWeb} 
         onValueChange={(value) => setMonths(value)}
         placeholder={{
-          label: 'Agrgarsss Producto',
+          label: '-Agregar Producto-',
           value: null,
         }}
         items={[
-          { label: 'Producto1 $1', value: 1 },
-          { label: 'Producto2 $2', value: 2 },
-          { label: 'Producto3 $3', value: 3 },
-          { label: 'Producto4 $4', value: 4 },
-          { label: 'Producto5 $5', value: 5 },
-          { label: 'Producto6 $6', value: 6 },
-          { label: 'Producto7 $7', value: 7 },
-          { label: 'Producto8 $8', value: 8 },
-          { label: 'Producto9 $9', value: 9 },
-          { label: 'Producto10 $10', value: 10 },
+          { label: 'Manzana', value: 0.25 },
+          { label: 'Pera ', value: 0.20 },
+          { label: 'Mango ', value: 0.95 },
+          { label: 'Sandia ', value: 1.50 },
+          { label: 'Uvas', value: 1.00 },
+          { label: 'Melon', value: 1.15 },
+          { label: 'Banano', value: 0.35 },
+          { label: 'Kiwi', value: 0.55 },
+          { label: 'Naranja', value: 0.40 },
+          { label: 'Mandarina', value: 0.15 },
         ]}
       />
     </View>
@@ -36,7 +36,8 @@ export default function Form(props) {
 const styles = StyleSheet.create({
   viewForm: {
     position: 'relative',
-    bottom: 40,
+    top:-40,
+    left:-350,
     width: '30%',
     paddingHorizontal: 50,
     backgroundColor: colors.PRIMARY_COLOR_DARK,
@@ -73,5 +74,7 @@ const picketSelectStyles = StyleSheet.create({
     position:'relative',
     top:10,
     left:10,
+    marginTop:20,
+    borderRadius:150,
   }
 });
