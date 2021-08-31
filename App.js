@@ -40,7 +40,7 @@ export default function App() {
     } else {
       const can = parseFloat(capital);
       const pro = parseFloat(months);
-      const tot = pro;
+      const tot = pro * can;
       if (pro == 0.25) {
         setMonthsnom('Manzana');
       } else if (pro == 0.20) {
@@ -79,28 +79,6 @@ export default function App() {
     const can = parseFloat(capital);
     const pro = parseFloat(months);
     const tot = pro * can;
-    if (pro == 1) {
-        setMonthsnom('Producto1');
-      } else if (pro == 2) {
-        setMonthsnom('Producto2');
-      } else if (pro == 3) {
-        setMonthsnom('Producto3');
-      } else if (pro == 4) {
-        setMonthsnom('Producto4');
-      } else if (pro == 5) {
-        setMonthsnom('Producto5');
-      } else if (pro == 6) {
-        setMonthsnom('Producto6');
-      } else if (pro == 7) {
-        setMonthsnom('Producto7');
-      } else if (pro == 8) {
-        setMonthsnom('Producto8');
-      } else if (pro == 9) {
-        setMonthsnom('Producto9');
-      } else if (pro == 10) {
-        setMonthsnom('Producto10');
-      }
-
     setTotal({
       totalPayable: tot.toFixed(2).replace('.', ','),
     });
