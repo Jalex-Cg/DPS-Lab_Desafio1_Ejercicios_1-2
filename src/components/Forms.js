@@ -36,8 +36,8 @@ export default function Form(props) {
 const styles = StyleSheet.create({
   viewForm: {
     position: 'relative',
-    top:-40,
-    left:-350,
+    top:-45,
+    left:-200,
     width: '30%',
     paddingHorizontal: 50,
     backgroundColor: colors.PRIMARY_COLOR_DARK,

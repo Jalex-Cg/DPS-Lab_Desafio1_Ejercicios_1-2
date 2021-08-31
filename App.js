@@ -17,7 +17,6 @@ export default function App() {
   const [interest, setInterest] = useState(null);
   const [months, setMonths] = useState(null);
   const [monthsnom, setMonthsnom] = useState(null);
-  const [nombre, setNombre] = useState(null);
   const [total, setTotal] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -118,6 +117,7 @@ export default function App() {
         setCapital={setCapital}
         total={total}
         errorMessage={errorMessage}
+        limpiar={limpiar}
       />
       <Footer calculate={calculate} limpiar={limpiar} enviar={enviar} />
     </>

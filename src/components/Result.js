@@ -19,7 +19,7 @@ export default function Result(props) {
   <Text style={styles.text}>X</Text>
  </TouchableOpacity>
  <Text>-----------------------------------------------------------------------------------------------------------------</Text>
- <DataResult
+ <DataResult style={{textAlign:'center'}}
  title="Total a pagar: "
  value={`${total.totalPayable} $`}
  />

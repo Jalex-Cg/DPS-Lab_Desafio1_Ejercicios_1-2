@@ -10,10 +10,6 @@ export default function Footer(props) {
  <TouchableOpacity style={styles.button} onPress={calculate}>
  <Text style={styles.text}>Agregar</Text>
  </TouchableOpacity>
-
- <TouchableOpacity style={styles.buttonB} onPress={limpiar}>
- <Text style={styles.text}>Borrar Lista</Text>
- </TouchableOpacity>
  </View>
  );
 }
@@ -36,9 +32,8 @@ const styles = StyleSheet.create({
   width: '25%', 
   marginTop:25,
   position:'relative',
-  top:-490,
-  
-
+  top:-520,
+  left:150
  },
  text: {
  fontWeight: 'bold',
