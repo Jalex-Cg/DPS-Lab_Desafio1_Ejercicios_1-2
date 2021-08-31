@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   StatusBar,
   Button,
+  Alert,
 } from 'react-native';
 import Form from './src/components/Forms';
 import Footer from './src/components/Footer';
@@ -21,9 +22,15 @@ export default function App() {
   const [errorMessage, setErrorMessage] = useState('');
 
   const limpiar = () => {
-    setMonthsnom('');
+    if(monthsnom != null){
+      setMonthsnom('');
     setMonths(null);
     setCapital(null);
+    Alert.alert('Mensaje', 'Producto eliminado', [
+      {text: 'Aceptar', onPress:() => console.log('alert closed')} 
+    ]);
+    }
+    
   };
 
   const calculate = () => {
