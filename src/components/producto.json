@@ -1,0 +1,44 @@
+{
+    "ListaProducto":[
+        {
+            "nombre": "Manzana",
+            "precio": 0.25
+        },
+        {
+            "nombre": "Pera",
+            "precio": 0.35
+        },
+        {
+            "nombre": "Uvas",
+            "precio": 0.50
+        },
+        {
+            "nombre": "Sandia",
+            "precio": 1.25
+        },
+        {
+            "nombre": "Banano",
+            "precio": 0.20
+        },
+        {
+            "nombre": "Kiwi",
+            "precio": 0.80
+        },
+        {
+            "nombre": "Mandarina",
+            "precio": 0.40
+        },
+        {
+            "nombre": "Naranja",
+            "precio": 0.55
+        },
+        {
+            "nombre": "Coco",
+            "precio": 1.00
+        },
+        {
+            "nombre": "Mango",
+            "precio": 1.15
+        }
+    ]
+}

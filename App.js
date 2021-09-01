@@ -11,21 +11,21 @@ import {
 import Form from './src/components/Forms';
 import Footer from './src/components/Footer';
 import Result from './src/components/Result';
+import producto from './src/components/producto';
 import colors from './src/utils/colors';
 
 export default function App() {
-  const [capital, setCapital] = useState(null);
-  const [interest, setInterest] = useState(null);
-  const [months, setMonths] = useState(null);
-  const [monthsnom, setMonthsnom] = useState(null);
+  const [cantidad, setCantidad] = useState(null);
+  const [nombrePro, setNombrePro] = useState(null);
+  const [nombrePronom, setNombrePronom] = useState(null);
   const [total, setTotal] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
 
   const limpiar = () => {
-    if(monthsnom != null){
-      setMonthsnom('');
-    setMonths(null);
-    setCapital(null);
+    if(nombrePronom != null){
+      setNombrePronom('');
+    setNombrePro(null);
+    setCantidad(null);
     Alert.alert('Mensaje', 'Producto eliminado', [
       {text: 'Aceptar', onPress:() => console.log('alert closed')} 
     ]);
@@ -35,32 +35,32 @@ export default function App() {
 
   const calculate = () => {
     reset();
-    if (!months) {
+    if (!nombrePro) {
       setErrorMessage('Seleccione un producto');
     } else {
-      const can = parseFloat(capital);
-      const pro = parseFloat(months);
+      const can = parseFloat(cantidad);
+      const pro = parseFloat(nombrePro);
       const tot = pro * can;
       if (pro == 0.25) {
-        setMonthsnom('Manzana');
+        setNombrePronom('Manzana');
       } else if (pro == 0.20) {
-        setMonthsnom('Pera');
+        setNombrePronom('Pera');
       } else if (pro == 0.95) {
-        setMonthsnom('Mango');
+        setNombrePronom('Mango');
       } else if (pro == 1.50) {
-        setMonthsnom('Sandia');
+        setNombrePronom('Sandia');
       } else if (pro == 1.00) {
-        setMonthsnom('Uvas');
+        setNombrePronom('Uvas');
       } else if (pro == 1.15) {
-        setMonthsnom('Melon');
+        setNombrePronom('Melon');
       } else if (pro == 0.35) {
-        setMonthsnom('Banano');
+        setNombrePronom('Banano');
       } else if (pro == 0.55 ) {
-        setMonthsnom('Kiwi');
+        setNombrePronom('Kiwi');
       } else if (pro == 0.40) {
-        setMonthsnom('Naranja');
+        setNombrePronom('Naranja');
       } else if (pro == 0.15) {
-        setMonthsnom('Mandarina');
+        setNombrePronom('Mandarina');
       }
 
       setTotal({
@@ -70,14 +70,14 @@ export default function App() {
   };
 
   useEffect(() => {
-    if (capital && months && monthsnom) enviar();
+    if (cantidad && nombrePro && nombrePronom) enviar();
     else reset();
-  }, [capital, interest, months]);
+  }, [cantidad, nombrePro]);
 
   const enviar = () => {
     reset();
-    const can = parseFloat(capital);
-    const pro = parseFloat(months);
+    const can = parseFloat(cantidad);
+    const pro = parseFloat(nombrePro);
     const tot = pro * can;
     setTotal({
       totalPayable: tot.toFixed(2).replace('.', ','),
@@ -94,12 +94,12 @@ export default function App() {
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.background} />
         <Text style={styles.titleApp}>Lista de compras</Text>
-        <Form setMonths={setMonths} />
+        <Form setNombrePro={setNombrePro} />
       </SafeAreaView>
       <Result
-        monthsnom={monthsnom}
-        months={months}
-        setCapital={setCapital}
+        nombrePronom={nombrePronom}
+        nombrePro={nombrePro}
+        setCantidad={setCantidad}
         total={total}
         errorMessage={errorMessage}
         limpiar={limpiar}

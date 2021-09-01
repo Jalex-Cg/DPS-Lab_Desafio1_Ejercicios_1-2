@@ -2,18 +2,18 @@ import React from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 
 export default function Result(props) {
- const {capital, interest, months, monthsnom, total, errorMessage, setCapital, limpiar} = props;
+ const {cantidad, nombrePro, nombrePronom, total, errorMessage, setCantidad, limpiar} = props;
  
   return (
  <View style={styles.content}>
  {total && (<View style={styles.boxResult}>
  <Text style={styles.title}>Lista de Productos</Text>
- <DataResult title="Producto: " value={`${monthsnom} `} />
- <DataResult title="Precio del producto " value={`${months} $`} />
+ <DataResult title="Producto: " value={`${nombrePronom} `} />
+ <DataResult title="Precio del producto " value={`${nombrePro} $`} />
  <TextInput style={styles.cantidad}
         placeholder="Cantidad"
         keyboardType="numeric"
-        onChange={(e) => setCapital(e.nativeEvent.text)}
+        onChange={(e) => setCantidad(e.nativeEvent.text)}
   />
 <TouchableOpacity style={styles.buttonB} onPress={limpiar}>
   <Text style={styles.text}>X</Text>

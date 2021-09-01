@@ -2,16 +2,19 @@ import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import colors from '../utils/colors';
+import {producto} from './producto';
 
 export default function Form(props) {
-  const { setCapital, setInterest, setMonths } = props;
-
+  const { setCantidad, setNombrePro } = props;
+  
   return (
     <View style={styles.viewForm}>
       <View style={styles.viewInputs}></View>
+
+
       <RNPickerSelect
         style={picketSelectStyles.pikerWeb} 
-        onValueChange={(value) => setMonths(value)}
+        onValueChange={(value) => setNombrePro(value)}
         placeholder={{
           label: '-Agregar Producto-',
           value: null,
@@ -72,6 +75,13 @@ const styles = StyleSheet.create({
 const picketSelectStyles = StyleSheet.create({
   pikerWeb:{
     position:'relative',
+    top:10,
+    left:10,
+    marginTop:20,
+    borderRadius:150,
+  },
+  pikerWeb2:{
+    position:'absolute',
     top:10,
     left:10,
     marginTop:20,
