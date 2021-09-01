@@ -44,10 +44,12 @@ function DataResult(props) {
 
 const styles = StyleSheet.create({
  content: {
- marginHorizontal: 300,
+   justifyContent:'center',
+   alignContent:'center'
  },
  boxResult: {
  padding: 50,
+ alignSelf:'center'
  },
  title: {
  fontSize: 25,
