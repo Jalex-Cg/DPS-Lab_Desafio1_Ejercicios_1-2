@@ -14,4 +14,7 @@ npx pod-install
 ## EJERCICIO 2
 * Ejercicio 2: [Ejercicio-2](https://snack.expo.dev/@cotaxo/1e79af)
 
+## PFD
+El PDF se encuentra dentro del repocitorio.
+
 
