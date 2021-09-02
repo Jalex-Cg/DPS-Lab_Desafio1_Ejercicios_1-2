@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   width: '25%', 
   marginTop:25,
   position:'relative',
-  bottom:'1270%',
+  bottom:'1010%',
   left:150
  },
  text: {

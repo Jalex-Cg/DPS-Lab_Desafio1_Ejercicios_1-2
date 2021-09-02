@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import InputSpinner from "react-native-input-spinner";
 
 export default function Result(props) {
  const {cantidad, nombrePro, nombrePronom, total, errorMessage, setCantidad, limpiar} = props;
@@ -10,11 +11,20 @@ export default function Result(props) {
  <Text style={styles.title}>Lista de Productos</Text>
  <DataResult title="Producto: " value={`${nombrePronom} `} />
  <DataResult title="Precio del producto " value={`${nombrePro} $`} />
- <TextInput style={styles.cantidad}
+ <InputSpinner style={styles.cantidad}
+    skin={"square"}
+    max={100}
+    min={0}
+    step={1}
+    colorMax={"#070807"}
+    colorMin={"#070807"}
+    onChange={(value) => setCantidad(value)}
+/>
+ {/* <TextInput style={styles.cantidad}
         placeholder="Cantidad"
         keyboardType="numeric"
         onChange={(e) => setCantidad(e.nativeEvent.text)}
-  />
+  /> */}
 <TouchableOpacity style={styles.buttonB} onPress={limpiar}>
   <Text style={styles.text}>X</Text>
  </TouchableOpacity>
@@ -45,21 +55,26 @@ function DataResult(props) {
 const styles = StyleSheet.create({
  content: {
    justifyContent:'center',
-   alignContent:'center'
+   alignContent:'center',
+   
+   
  },
  boxResult: {
- padding: 50,
- alignSelf:'center'
+ backgroundColor:'lavender',
+ alignSelf:'center',
+ borderWidth:2
+
  },
  title: {
  fontSize: 25,
  textAlign: 'center',
  fontWeight: 'bold',
  marginBottom: 20,
+ backgroundColor:'lightblue',
+ borderWidth:2
  },
  value: {
  flexDirection: 'row',
- 
  marginBottom: 20,
  },
  error: {
@@ -70,20 +85,21 @@ const styles = StyleSheet.create({
  },
  cantidad:{
    marginTop:20,
-   width: '10%',
+   width: '25%',
    position:"relative",
-   left:500,
-   top:-70,
+   left:400,
+   top:-100,
  },
  buttonB: {
   backgroundColor: 'red',
   padding: 6,
-  borderRadius: 20,
+  borderRadius: 150,
   width: '5%', 
   marginTop:25,
   position:"relative",
-   left:600,
-   top:-125,
+   left:580,
+   top:-160,
+   borderWidth:1
  },
  text: {
   fontWeight: 'bold',

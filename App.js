@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView,
-  StatusBar,
-  Button,
-  Alert,
-} from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, StatusBar, Button, Alert,} from 'react-native';
+import InputSpinner from "react-native-input-spinner";
 import Form from './src/components/Forms';
 import Footer from './src/components/Footer';
 import Result from './src/components/Result';
@@ -116,17 +109,18 @@ const styles = StyleSheet.create({
   background: {
     backgroundColor: colors.PRIMARY_COLOR,
     height: 150,
-    width: '100%',
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
+    width: '75%',
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50,
     position: 'absolute',
     zIndex: -1,
+    borderWidth:4
   },
   titleApp: {
-    fontSize: 25,
+    fontSize: 30,
     fontWeight: 'bold',
     color: '#fff',
-    marginTop: 15,
+    marginTop: 30,
     
   },
 });
